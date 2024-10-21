@@ -93,6 +93,11 @@ header {
     font-weight: bold;
 }
 
+.form-link img {
+    width: 80px; /* Googleフォームアイコンの幅を設定 */
+    height: auto; /* 高さは自動調整 */
+}
+
 main {
     padding: 20px;
 }
