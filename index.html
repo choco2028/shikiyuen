@@ -5,6 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>四季遊宴</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* 画像のサイズを統一 */
+        .spring-god, .summer-god, .autumn-god, .winter-god, .sakura {
+            width: 30%; /* 画像の幅を30%に設定 */
+            height: auto; /* 高さは自動調整 */
+        }
+
+        /* ひまわり画像の特定サイズを変更する場合 */
+        .himari {
+            width: 30%; /* 他の画像と同じ幅に設定 */
+            height: auto; /* 高さは自動調整 */
+        }
+
+        /* YouTubeのサイズ調整 */
+        .youtube-container iframe {
+            width: 100%; /* 幅を100%に設定 */
+            height: 315px; /* 高さを315pxに設定 */
+        }
+    </style>
 </head>
 <body id="home">
 
@@ -61,6 +80,7 @@
                     <div class="youtube-container">
                         <iframe src="https://www.youtube.com/embed/j20kJ1_JKr4" frameborder="0" allowfullscreen></iframe>
                     </div>
+
                     <div class="youtube-container">
                         <iframe src="https://www.youtube.com/embed/rYoyERNLIuo?si=AD_Cu8kwBhyXN25b" frameborder="0" allowfullscreen></iframe>
                     </div>
@@ -68,7 +88,7 @@
 
                 <div class="god right">
                     <img src="img/summer_god.png" alt="夏の神" class="summer-god">
-                    <img src="img/himari.png" alt="向日葵" class="sakura">
+                    <img src="img/himari.png" alt="向日葵" class="himari"> <!-- クラス名を修正 -->
                 </div>
             </div>
 
