@@ -1,21 +1,14 @@
-/* CSSのスタイル */
-body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f0f0f0;
-}
-
+/* サイドバーのスタイル */
 .sidebar {
-    height: 100%;
-    width: 0;
-    position: fixed;
-    z-index: 1;
+    height: 100%; /* Full height */
+    width: 0; /* 初期状態は幅0 */
+    position: fixed; /* 固定表示 */
+    z-index: 1; /* 最前面 */
     top: 0;
-    right: 0;
-    background-color: #111;
-    overflow-x: hidden;
-    transition: 0.5s;
+    right: 0; /* 右側に表示 */
+    background-color: #111; /* 背景色 */
+    overflow-x: hidden; /* 横スクロールバーを非表示 */
+    transition: 0.5s; /* 開閉のアニメーション */
     padding-top: 60px;
 }
 
@@ -32,6 +25,15 @@ body {
     color: #f1f1f1;
 }
 
+.sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+/* 「三」ボタン（openbtn）を右下に固定 */
 .openbtn {
     font-size: 20px;
     cursor: pointer;
@@ -40,15 +42,28 @@ body {
     border: none;
     padding: 10px 15px;
     border-radius: 5px;
-    position: fixed;
-    right: 20px;
-    bottom: 20px;
-    z-index: 2;
+    position: fixed; /* スクロールに追従 */
+    right: 20px; /* 右端からの距離 */
+    bottom: 20px; /* 下端からの距離 */
+    z-index: 2; /* サイドバーよりも前面に表示 */
+}
+
+.openbtn:hover {
+    background-color: #444;
+}
+
+body {
+    font-family: 'Arial', sans-serif !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background-color: #f0f0f0 !important;
 }
 
 header {
     position: relative;
     text-align: center;
+    color: white;
+    margin-bottom: 0;
 }
 
 .title-container {
@@ -56,11 +71,16 @@ header {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    width: 100%;
+    text-align: center;
+    z-index: 1;
 }
 
 .main-title-image {
     max-width: 100%;
     height: auto;
+    display: block;
+    margin: 0 auto;
 }
 
 .slideshow-container {
@@ -81,25 +101,38 @@ header {
     object-fit: cover;
 }
 
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from { opacity: 0.4; }
+    to { opacity: 1; }
+}
+
 .form-link {
     text-align: center;
     margin: 20px 0;
 }
 
-.form-text {
-    font-family: 'Kozuka Mincho Pro', serif;
-    font-size: 2rem;
-    color: #333;
-    font-weight: bold;
+.form-link img {
+    width: 100px;
+    height: 100px;
 }
 
-.form-link img {
-    width: 80px; /* Googleフォームアイコンの幅を設定 */
-    height: auto; /* 高さは自動調整 */
+.form-text {
+    font-family: 'Kozuka Mincho Pro', serif;
+    font-size: 3vw;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 10px;
+    line-height: 1.5;
 }
 
 main {
     padding: 20px;
+    text-align: center;
 }
 
 .gods {
@@ -111,60 +144,40 @@ main {
 .god-container {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
-    margin-bottom: 20px; /* 各神のコンテナの下の余白を調整 */
-    width: 100%;
+    align-items: flex-start; /* 上揃えに */
+    margin-bottom: 20px; /* 各神の間の隙間 */
 }
 
 .god {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-direction: column; /* 縦並びに */
+    align-items: center; /* 中央揃え */
 }
 
-.god img {
-    width: 70%; /* 画像の幅を70%に設定 */
+.spring-god,
+.summer-god,
+.autumn-god,
+.winter-god {
+    max-width: 150px; /* 全てのキャラクターのサイズ */
     height: auto;
-    object-fit: cover;
 }
 
-.god-description {
-    width: 25%; /* 説明の幅を25%に設定 */
-    text-align: center;
+.sakura {
+    max-width: 100px; /* 桜のサイズ */
+    height: auto;
 }
 
 .youtube-container {
+    width: 100%; /* 横幅を100%に */
+    height: auto; /* 自動的に高さを調整 */
     margin: 10px 0;
 }
 
 .youtube-container iframe {
-    width: 100%; /* YouTubeの幅を100%に設定 */
-    height: 300px; /* YouTubeの高さを300pxに設定 */
-    max-width: 500px; /* 最大幅を500pxに設定 */
-}
-
-/* スマホ用のレスポンシブ対応（幅768px以下） */
-@media (max-width: 768px) {
-    .god img {
-        width: 90%; /* スマホサイズで画像の幅を90%に設定 */
-    }
-
-    .youtube-container iframe {
-        height: 250px; /* スマホサイズでYouTubeの高さを250pxに設定 */
-    }
-
-    .form-text {
-        font-size: 1.5rem; /* スマホサイズでフォームテキストのサイズを調整 */
-    }
-
-    .god-container {
-        flex-direction: column; /* スマホサイズで各神のコンテナを縦に並べる */
-        align-items: center; /* 中央揃え */
-    }
-
-    .god-description {
-        width: 90%; /* スマホサイズで説明の幅を90%に設定 */
-    }
+    width: 90%; /* iframeの横幅を90%に */
+    height: 300px; /* 動画の高さ */
+    max-width: 560px; /* 最大横幅 */
+    margin: 0 auto; /* 中央揃え */
 }
 
 footer {
@@ -177,13 +190,14 @@ footer {
 .social-icons {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap; /* 複数行で表示 */
 }
 
 .social-icons a {
-    margin: 0 10px;
+    margin: 10px;
 }
 
 .social-icons img {
-    width: 30px;
-    height: 30px;
+    width: 50px; /* アイコンのサイズ */
+    height: 50px; /* アイコンのサイズ */
 }
