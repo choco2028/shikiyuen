@@ -52,7 +52,6 @@
     background-color: #444;
 }
 
-
 body {
     font-family: 'Arial', sans-serif !important;
     margin: 0 !important;
@@ -142,89 +141,69 @@ main {
     align-items: center;
 }
 
+.god-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* 画像とYouTubeの内容を揃える */
+    width: 80%; /* 幅を指定 */
+    margin-bottom: 20px; /* 各セクションの間に余白を追加 */
+}
+
 .god {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 80%;
-    margin-bottom: 20px;
+    flex-direction: column; /* 縦に並べる */
+    align-items: center; /* 中央揃え */
+    width: 40%; /* 画像の幅を40%に */
 }
 
 .god img {
-    width: 30%;
-    height: auto;
-    object-fit: cover;
+    width: 100%; /* 親要素の幅に応じてサイズを調整 */
+    height: auto; /* 高さを自動調整 */
 }
+
+/* ... 省略 ... */
 
 .god-description {
-    width: 30%;
-    text-align: left;
+    display: flex;
+    flex-direction: column; /* 縦に並べる */
+    align-items: center; /* 中央揃え */
+    width: 30%; /* 幅を調整 (20% から 30% に変更) */
+    margin: 0 20px; /* 左右の余白を追加 */
 }
 
-.god.left {
-    flex-direction: column;
-    align-items: flex-start;
+.youtube-container {
+    position: relative; /* 相対位置に設定 */
+    padding-bottom: 56.25%; /* 16:9のアスペクト比を保つためのパディング */
+    height: 0; /* 高さを0に設定 */
+    overflow: hidden; /* 溢れた部分を隠す */
+    width: 100%; /* 幅を100%に */
+    max-width: 800px; /* 最大幅を設定 (必要に応じて調整) */
 }
 
-.god.left img:nth-child(2) {
-    margin-top: 10px; /* sakura.pngの下に余白を追加 */
+.youtube-container iframe {
+    position: absolute; /* 絶対位置に設定 */
+    top: 0; /* 上端から0に設定 */
+    left: 0; /* 左端から0に設定 */
+    width: 100%; /* 幅を100%に */
+    height: 100%; /* 高さを100%に */
 }
 
-.god.right {
-    flex-direction: column-reverse;
-    align-items: flex-end;
-}
+/* ... 省略 ... */
+
 
 footer {
-    background-color: #333;
+    background-color: #111;
     color: white;
     text-align: center;
     padding: 10px;
 }
 
 .social-icons {
-    display: flex;
-    justify-content: center;
-}
-
-.social-icons a {
-    margin: 0 10px;
+    margin-top: 10px;
 }
 
 .social-icons img {
     width: 30px;
     height: 30px;
-}
-
-/* スマホ用のレスポンシブ対応（幅768px以下） */
-@media (max-width: 768px) {
-    .god {
-        width: 100%;
-        justify-content: center;
-        flex-direction: column; /* スマホ用に縦に並べる */
-        align-items: center;
-    }
-
-    .god.left img {
-        order: 1;
-        margin-right: 10px;
-    }
-
-    .god.right img {
-        order: 2;
-        margin-left: 10px;
-    }
-
-    .god img {
-        width: 50%; /* スマホでの画像の幅を調整 */
-    }
-
-    .god-description {
-        width: 80%;
-        text-align: center;
-    }
-
-    .main-title-image {
-        max-width: 80%;
-    }
+    margin: 0 10px;
 }
