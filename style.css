@@ -164,7 +164,7 @@ main {
 
 .youtube-container {
     width: 100%;
-    max-width: 600px; /* YouTube動画の最大幅 */
+    max-width: 450px; /* YouTube動画の最大幅 */
     margin: 10px 0; /* 上下のマージンを10px */
 }
 
