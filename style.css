@@ -1,4 +1,12 @@
-/* サイドバーのスタイル */
+/* CSSスタイル */
+
+body {
+    font-family: 'Arial', sans-serif !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background-color: #f0f0f0 !important;
+}
+
 .sidebar {
     height: 100%; /* Full height */
     width: 0; /* 初期状態は幅0 */
@@ -50,13 +58,6 @@
 
 .openbtn:hover {
     background-color: #444;
-}
-
-body {
-    font-family: 'Arial', sans-serif !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    background-color: #f0f0f0 !important;
 }
 
 header {
@@ -143,61 +144,60 @@ main {
 
 .god-container {
     display: flex;
+    align-items: flex-start;
     justify-content: space-between;
-    align-items: flex-start; /* 上揃えに */
-    margin-bottom: 20px; /* 各神の間の隙間 */
+    width: 100%; /* 最大幅に設定 */
 }
 
 .god {
     display: flex;
-    flex-direction: column; /* 縦並びに */
-    align-items: center; /* 中央揃え */
+    flex-direction: column;
+    align-items: center;
+    width: 30%; /* 幅を30%に設定 */
+    margin: 0 10px; /* 左右の余白を10px */
 }
 
-.spring-god,
-.summer-god,
-.autumn-god,
-.winter-god {
-    max-width: 150px; /* 全てのキャラクターのサイズ */
-    height: auto;
-}
-
-.sakura {
-    max-width: 100px; /* 桜のサイズ */
-    height: auto;
+.spring-god, .summer-god, .autumn-god, .winter-god, .sakura {
+    width: 100%; /* 画像を100%の幅に設定 */
+    max-width: 200px; /* PCサイズでの最大幅 */
 }
 
 .youtube-container {
-    width: 100%; /* 横幅を100%に */
-    height: auto; /* 自動的に高さを調整 */
-    margin: 10px 0;
+    width: 100%;
+    max-width: 600px; /* YouTube動画の最大幅 */
+    margin: 10px 0; /* 上下のマージンを10px */
 }
 
 .youtube-container iframe {
-    width: 90%; /* iframeの横幅を90%に */
-    height: 300px; /* 動画の高さ */
-    max-width: 560px; /* 最大横幅 */
-    margin: 0 auto; /* 中央揃え */
+    width: 100%; /* 幅を100%に設定 */
+    height: 300px; /* 縦幅は300pxに設定 */
+}
+
+@media (max-width: 768px) {
+    .spring-god, .summer-god, .autumn-god, .winter-god, .sakura {
+        max-width: 150px; /* スマホサイズでの最大幅 */
+    }
+
+    .youtube-container iframe {
+        height: 200px; /* スマホサイズでの高さを200pxに設定 */
+    }
 }
 
 footer {
     background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 10px;
+    padding: 10px 0;
 }
 
 .social-icons {
     display: flex;
     justify-content: center;
-    flex-wrap: wrap; /* 複数行で表示 */
 }
 
 .social-icons a {
-    margin: 10px;
+    margin: 0 10px;
 }
 
 .social-icons img {
-    width: 50px; /* アイコンのサイズ */
-    height: 50px; /* アイコンのサイズ */
+    width: 30px;
+    height: 30px;
 }
