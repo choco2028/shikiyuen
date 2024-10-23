@@ -1,5 +1,4 @@
-/* CSSスタイル */
-
+/* 全体のスタイル */
 body {
     font-family: 'Arial', sans-serif !important;
     margin: 0 !important;
@@ -7,16 +6,17 @@ body {
     background-color: #f0f0f0 !important;
 }
 
+/* サイドバー */
 .sidebar {
-    height: 100%; /* Full height */
-    width: 0; /* 初期状態は幅0 */
-    position: fixed; /* 固定表示 */
-    z-index: 1; /* 最前面 */
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
     top: 0;
-    right: 0; /* 右側に表示 */
-    background-color: #111; /* 背景色 */
-    overflow-x: hidden; /* 横スクロールバーを非表示 */
-    transition: 0.5s; /* 開閉のアニメーション */
+    right: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
     padding-top: 60px;
 }
 
@@ -41,7 +41,6 @@ body {
     margin-left: 50px;
 }
 
-/* 「三」ボタン（openbtn）を右下に固定 */
 .openbtn {
     font-size: 20px;
     cursor: pointer;
@@ -50,20 +49,20 @@ body {
     border: none;
     padding: 10px 15px;
     border-radius: 5px;
-    position: fixed; /* スクロールに追従 */
-    right: 20px; /* 右端からの距離 */
-    bottom: 20px; /* 下端からの距離 */
-    z-index: 2; /* サイドバーよりも前面に表示 */
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    z-index: 2;
 }
 
 .openbtn:hover {
     background-color: #444;
 }
 
+/* スライドショーとタイトル */
 header {
     position: relative;
     text-align: center;
-    color: white;
     margin-bottom: 0;
 }
 
@@ -80,8 +79,6 @@ header {
 .main-title-image {
     max-width: 100%;
     height: auto;
-    display: block;
-    margin: 0 auto;
 }
 
 .slideshow-container {
@@ -112,6 +109,7 @@ header {
     to { opacity: 1; }
 }
 
+/* フォームリンク */
 .form-link {
     text-align: center;
     margin: 20px 0;
@@ -131,6 +129,7 @@ header {
     line-height: 1.5;
 }
 
+/* メインコンテンツ */
 main {
     padding: 20px;
     text-align: center;
@@ -144,45 +143,71 @@ main {
 
 .god-container {
     display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    width: 100%; /* 最大幅に設定 */
+    align-items: center;
+    justify-content: space-between; /* 左右の画像を均等に配置 */
+    position: relative;
+    width: 100%;
+    max-width: 900px;
+    margin-bottom: 50px;
 }
 
 .god {
+    flex: 1; /* 各画像の幅を均等にする */
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 30%; /* 幅を30%に設定 */
-    margin: 0 10px; /* 左右の余白を10px */
+    justify-content: center; /* 中央に配置 */
 }
 
-.spring-god, .summer-god, .autumn-god, .winter-god, .sakura {
-    width: 100%; /* 画像を100%の幅に設定 */
-    max-width: 200px; /* PCサイズでの最大幅 */
+.god-image {
+    width: 120px; /* 各神の画像の幅を設定 */
+    height: auto;
+    z-index: 0; /* 動画よりも後ろに表示 */
 }
 
 .youtube-container {
-    width: 100%;
-    max-width: 200px; /* YouTube動画の最大幅 */
-    margin: 10px 0; /* 上下のマージンを10px */
+    flex: 1; /* 動画の領域を広くする */
+    margin: 0 20px; /* 左右のマージンを追加 */
+    position: relative;
+    z-index: 1; /* 画像よりも前面に表示 */
 }
 
 .youtube-container iframe {
-    width: 100%; /* 幅を100%に設定 */
-    height: 300px; /* 縦幅は300pxに設定 */
+    width: 100%;
+    height: 250px; /* 動画の高さを設定 */
 }
 
+/* スマホサイズ対応（768px以下の画面向け） */
 @media (max-width: 768px) {
-    .spring-god, .summer-god, .autumn-god, .winter-god, .sakura {
-        max-width: 150px; /* スマホサイズでの最大幅 */
+    .god-image {
+        width: 80px; /* スマホ時の画像の幅を小さくする */
     }
 
     .youtube-container iframe {
-        height: 200px; /* スマホサイズでの高さを200pxに設定 */
+        height: 180px; /* スマホ時の動画の高さ */
     }
 }
 
+/* タブレットサイズ対応（992px以下の画面向け） */
+@media (max-width: 992px) {
+    .god-image {
+        width: 90px; /* タブレット時の画像の幅を設定 */
+    }
+
+    .god-image.left {
+        left: -100px; /* タブレット時の左側画像の位置を調整 */
+    }
+
+    .god-image.right {
+        right: -100px; /* タブレット時の右側画像の位置を調整 */
+    }
+
+    .youtube-container iframe {
+        height: 220px; /* タブレット時の動画の高さ */
+    }
+}
+
+
+
+/* フッター */
 footer {
     background-color: #333;
     padding: 10px 0;
