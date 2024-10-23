@@ -135,56 +135,66 @@ main {
     text-align: center;
 }
 
+
+
+.god-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.god-image {
+    position: absolute;
+    width: 200px; /* 画像の幅を設定 */
+    z-index: 1; /* 画像が前面にくるように設定 */
+}
+
+.god.left {
+    left: -100px; /* 左側の画像を動画に重ねる */
+}
+
+.god.right {
+    right: -100px; /* 右側の画像を動画に重ねる */
+}
+
+.youtube-container {
+    position: relative;
+    z-index: 0; /* 動画が画像より下に表示される */
+}
+
+.youtube-container iframe {
+    width: 600px; /* 動画の幅 */
+    height: 350px; /* 動画の高さ */
+}
+
 .gods {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.god-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between; /* 左右の画像を均等に配置 */
-    position: relative;
-    width: 100%;
-    max-width: 900px;
-    margin-bottom: 50px;
-}
-
-.god {
-    flex: 1; /* 各画像の幅を均等にする */
-    display: flex;
-    justify-content: center; /* 中央に配置 */
-}
-
-.god-image {
-    width: 120px; /* 各神の画像の幅を設定 */
-    height: auto;
-    z-index: 0; /* 動画よりも後ろに表示 */
-}
-
-.youtube-container {
-    flex: 1; /* 動画の領域を広くする */
-    margin: 0 20px; /* 左右のマージンを追加 */
-    position: relative;
-    z-index: 1; /* 画像よりも前面に表示 */
-}
-
-.youtube-container iframe {
-    width: 100%;
-    height: 250px; /* 動画の高さを設定 */
-}
-
-/* スマホサイズ対応（768px以下の画面向け） */
 @media (max-width: 768px) {
     .god-image {
-        width: 80px; /* スマホ時の画像の幅を小さくする */
+        width: 150px; /* スマホサイズでの画像サイズを縮小 */
+    }
+
+    .god.left {
+        left: -75px; /* スマホでの左側画像の位置調整 */
+    }
+
+    .god.right {
+        right: -75px; /* スマホでの右側画像の位置調整 */
     }
 
     .youtube-container iframe {
-        height: 180px; /* スマホ時の動画の高さ */
+        width: 100%; /* スマホで動画幅を100%に */
+        height: 200px; /* スマホでの動画高さ */
     }
 }
+
+
 
 /* タブレットサイズ対応（992px以下の画面向け） */
 @media (max-width: 992px) {
