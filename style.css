@@ -141,8 +141,6 @@ main {
     align-items: center;
 }
 
-
-
 .god-container {
     position: relative;
     display: flex;
@@ -151,71 +149,66 @@ main {
     margin-bottom: 30px; /* 間隔を広げる */
 }
 
-.god-image {
-    position: absolute;
-    width: 300px; /* 画像の幅を設定 */
-    z-index: 1; /* 画像が前面にくるように設定 */
+/* 画像のスタイル */
+.god img {
+    width: 70%; /* 画像のサイズを大きくする */
+    max-width: 500px; /* PC画面用の最大サイズ */
+    object-fit: cover; /* アスペクト比を保持 */
+    position: absolute; /* 絶対配置にする */
+    z-index: 1; /* 画像が動画より後ろに表示されるように */
 }
 
-.god.left {
-    left: -150px; /* 左側の画像を動画に重ねる */
+/* 左側の画像の位置 */
+.god.left img {
+    left: -30%; /* 動画に30%重なるようにする */
 }
 
-.god.right {
-    right: -150px; /* 右側の画像を動画に重ねる */
+/* 右側の画像の位置 */
+.god.right img {
+    right: -30%; /* 動画に30%重なるようにする */
 }
 
+/* 動画のスタイル */
 .youtube-container {
     position: relative;
-    z-index: 0; /* 動画が画像より下に表示される */
+    z-index: 2; /* 動画が画像より前に表示されるように */
 }
 
 .youtube-container iframe {
-    width: 700px; /* 動画の幅を設定 */
-    height: 400px; /* 動画の高さを設定 */
+    width: 100%; /* 動画の幅を100%に設定 */
+    height: 450px; /* 動画の高さを調整 */
 }
 
+/* スマホ用のメディアクエリの調整 */
 @media (max-width: 768px) {
-    .god-image {
-        width: 200px; /* スマホサイズで画像を少し小さめに */
+    .god img {
+        width: 90%; /* スマホでの画像サイズを調整 */
+        max-width: 350px; /* 最大サイズを調整 */
     }
 
-    .god.left {
-        left: -100px; /* スマホでの左側画像の位置調整 */
+    .god.left img {
+        left: -20%; /* スマホでの左側画像の位置調整 */
     }
 
-    .god.right {
-        right: -100px; /* スマホでの右側画像の位置調整 */
+    .god.right img {
+        right: -20%; /* スマホでの右側画像の位置調整 */
     }
 
     .youtube-container iframe {
-        width: 100%; /* スマホで動画幅を100%に */
-        height: 250px; /* スマホでの動画高さ */
+        height: 300px; /* スマホでの動画の高さを調整 */
     }
 }
-
-
 
 /* タブレットサイズ対応（992px以下の画面向け） */
 @media (max-width: 992px) {
-    .god-image {
-        width: 90px; /* タブレット時の画像の幅を設定 */
-    }
-
-    .god-image.left {
-        left: -100px; /* タブレット時の左側画像の位置を調整 */
-    }
-
-    .god-image.right {
-        right: -100px; /* タブレット時の右側画像の位置を調整 */
+    .god img {
+        width: 90%; /* タブレット時の画像サイズ */
     }
 
     .youtube-container iframe {
-        height: 220px; /* タブレット時の動画の高さ */
+        height: 400px; /* タブレット時の動画の高さ */
     }
 }
-
-
 
 /* フッター */
 footer {
