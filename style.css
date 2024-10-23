@@ -135,6 +135,12 @@ main {
     text-align: center;
 }
 
+.gods {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 
 
 .god-container {
@@ -142,21 +148,21 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 20px;
+    margin-bottom: 30px; /* 間隔を広げる */
 }
 
 .god-image {
     position: absolute;
-    width: 200px; /* 画像の幅を設定 */
+    width: 300px; /* 画像の幅を設定 */
     z-index: 1; /* 画像が前面にくるように設定 */
 }
 
 .god.left {
-    left: -100px; /* 左側の画像を動画に重ねる */
+    left: -150px; /* 左側の画像を動画に重ねる */
 }
 
 .god.right {
-    right: -100px; /* 右側の画像を動画に重ねる */
+    right: -150px; /* 右側の画像を動画に重ねる */
 }
 
 .youtube-container {
@@ -165,32 +171,26 @@ main {
 }
 
 .youtube-container iframe {
-    width: 600px; /* 動画の幅 */
-    height: 350px; /* 動画の高さ */
-}
-
-.gods {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    width: 700px; /* 動画の幅を設定 */
+    height: 400px; /* 動画の高さを設定 */
 }
 
 @media (max-width: 768px) {
     .god-image {
-        width: 150px; /* スマホサイズでの画像サイズを縮小 */
+        width: 200px; /* スマホサイズで画像を少し小さめに */
     }
 
     .god.left {
-        left: -75px; /* スマホでの左側画像の位置調整 */
+        left: -100px; /* スマホでの左側画像の位置調整 */
     }
 
     .god.right {
-        right: -75px; /* スマホでの右側画像の位置調整 */
+        right: -100px; /* スマホでの右側画像の位置調整 */
     }
 
     .youtube-container iframe {
         width: 100%; /* スマホで動画幅を100%に */
-        height: 200px; /* スマホでの動画高さ */
+        height: 250px; /* スマホでの動画高さ */
     }
 }
 
