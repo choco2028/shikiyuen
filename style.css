@@ -1,231 +1,92 @@
-/* 全体のスタイル */
+/* 基本リセット */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
-    font-family: 'Arial', sans-serif !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    background-color: #f0f0f0 !important;
-}
-
-/* サイドバー */
-.sidebar {
-    height: 100%;
-    width: 0;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    right: 0;
-    background-color: #111;
+    font-family: 'Arial', sans-serif;
     overflow-x: hidden;
-    transition: 0.5s;
-    padding-top: 60px;
 }
 
-.sidebar a {
-    padding: 10px 15px;
-    text-decoration: none;
-    font-size: 25px;
-    color: #818181;
-    display: block;
-    transition: 0.3s;
-}
-
-.sidebar a:hover {
-    color: #f1f1f1;
-}
-
-.sidebar .closebtn {
-    position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 36px;
-    margin-left: 50px;
-}
-
-.openbtn {
-    font-size: 20px;
-    cursor: pointer;
-    background-color: #111;
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    border-radius: 5px;
-    position: fixed;
-    right: 20px;
-    bottom: 20px;
-    z-index: 2;
-}
-
-.openbtn:hover {
-    background-color: #444;
-}
-
-/* スライドショーとタイトル */
+/* ヘッダー部分 */
 header {
-    position: relative;
-    text-align: center;
-    margin-bottom: 0;
-}
-
-.title-container {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     width: 100%;
-    text-align: center;
-    z-index: 1;
+    height: 100vh; /* ヘッダーの高さを画面全体に変更 */
+    background-image: url('img/top.png');
+    background-size: cover; /* 画面を覆うように画像を拡大 */
+    background-position: center center; /* 中央に配置 */
+    background-repeat: no-repeat; /* 繰り返しを防ぐ */
 }
 
-.main-title-image {
-    max-width: 100%;
-    height: auto;
+/* 縦長の画面の場合にcontainを使用し、余白を調整 */
+@media (max-width: 768px) {
+    header {
+        background-size: contain; /* 縦長の場合は画像全体を表示 */
+        background-position: center center; /* 中央に配置 */
+        height: auto; /* 高さを自動調整して余白を最小限に */
+        min-height: 100vh; /* 最小限でも画面いっぱいの高さを保持 */
+    }
 }
 
-.slideshow-container {
-    position: relative;
-    width: 100%;
-    height: 50vh;
-    margin: auto;
-    overflow: hidden;
+.logo img {
+    height: 50px;
 }
 
-.mySlides {
-    display: none;
-}
-
-.slide-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.fade {
-    animation-name: fade;
-    animation-duration: 1.5s;
-}
-
-@keyframes fade {
-    from { opacity: 0.4; }
-    to { opacity: 1; }
-}
-
-/* フォームリンク */
-.form-link {
-    text-align: center;
-    margin: 20px 0;
-}
-
-.form-link img {
-    width: 100px;
-    height: 100px;
-}
-
-.form-text {
-    font-family: 'Kozuka Mincho Pro', serif;
-    font-size: 3vw;
-    color: #333;
-    font-weight: bold;
-    margin-bottom: 10px;
-    line-height: 1.5;
-}
-
-/* メインコンテンツ */
-main {
-    padding: 20px;
-    text-align: center;
-}
-
-.gods {
+/* ハンバーガーメニュー */
+.hamburger-menu {
     display: flex;
     flex-direction: column;
-    align-items: center;
-}
-
-.god-container {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 30px; /* 間隔を広げる */
-}
-
-/* 画像のスタイル */
-.god img {
-    width: 70%; /* 画像のサイズを大きくする */
-    max-width: 500px; /* PC画面用の最大サイズ */
-    object-fit: cover; /* アスペクト比を保持 */
-    position: absolute; /* 絶対配置にする */
-    z-index: 1; /* 画像が動画より後ろに表示されるように */
-}
-
-/* 左側の画像の位置 */
-.god.left img {
-    left: -30%; /* 動画に30%重なるようにする */
-}
-
-/* 右側の画像の位置 */
-.god.right img {
-    right: -30%; /* 動画に30%重なるようにする */
-}
-
-/* 動画のスタイル */
-.youtube-container {
-    position: relative;
-    z-index: 2; /* 動画が画像より前に表示されるように */
-}
-
-.youtube-container iframe {
-    width: 100%; /* 動画の幅を100%に設定 */
-    height: 450px; /* 動画の高さを調整 */
-}
-
-/* スマホ用のメディアクエリの調整 */
-@media (max-width: 768px) {
-    .god img {
-        width: 90%; /* スマホでの画像サイズを調整 */
-        max-width: 350px; /* 最大サイズを調整 */
-    }
-
-    .god.left img {
-        left: -20%; /* スマホでの左側画像の位置調整 */
-    }
-
-    .god.right img {
-        right: -20%; /* スマホでの右側画像の位置調整 */
-    }
-
-    .youtube-container iframe {
-        height: 300px; /* スマホでの動画の高さを調整 */
-    }
-}
-
-/* タブレットサイズ対応（992px以下の画面向け） */
-@media (max-width: 992px) {
-    .god img {
-        width: 90%; /* タブレット時の画像サイズ */
-    }
-
-    .youtube-container iframe {
-        height: 400px; /* タブレット時の動画の高さ */
-    }
-}
-
-/* フッター */
-footer {
-    background-color: #333;
-    padding: 10px 0;
-}
-
-.social-icons {
-    display: flex;
-    justify-content: center;
-}
-
-.social-icons a {
-    margin: 0 10px;
-}
-
-.social-icons img {
+    justify-content: space-around;
     width: 30px;
-    height: 30px;
+    height: 25px;
+    cursor: pointer;
+    z-index: 1100;
+}
+
+.hamburger-menu span {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background: #333;
+    border-radius: 2px;
+    transition: all 0.3s;
+}
+
+/* ナビゲーションメニュー */
+nav {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    right: -250px;
+    width: 250px;
+    height: 100vh;
+    background-color: #fff;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+    transition: right 0.3s ease-in-out;
+    z-index: 1000;
+    overflow-y: auto;
+}
+
+nav ul {
+    list-style: none;
+    padding: 20px;
+}
+
+nav ul li {
+    padding: 15px 0;
+    border-bottom: 1px solid #eee;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+/* メニューがアクティブなとき */
+nav.active {
+    right: 0;
 }
