@@ -13,19 +13,20 @@ body {
 /* ヘッダー部分 */
 header {
     width: 100%;
-    height: 100vh; /* ヘッダーの高さを画面全体に設定 */
+    height: 100vh; /* ヘッダーの高さを画面全体に変更 */
     background-image: url('img/top.png');
     background-size: cover; /* 画面を覆うように画像を拡大 */
     background-position: center center; /* 中央に配置 */
     background-repeat: no-repeat; /* 繰り返しを防ぐ */
 }
 
-/* 縦長の画面の場合でも横がはみ出さず、余白をなくす調整 */
+/* 縦長の画面の場合にcontainを使用し、横にはみ出さないように調整 */
 @media (max-width: 768px) {
     header {
-        background-size: cover; /* 画像が画面を覆うように調整 */
+        background-size: contain; /* 画像全体が収まるように調整 */
         background-position: center center; /* 中央に配置 */
-        height: 100vh; /* 高さを100vhに固定 */
+        height: auto; /* 高さを自動調整 */
+        min-height: 100vh; /* 最小限でも画面いっぱいの高さを保持 */
     }
 }
 
@@ -35,13 +36,16 @@ header {
 
 /* ハンバーガーメニュー */
 .hamburger-menu {
+    position: fixed; /* スクロールしても固定されるようにする */
+    top: 20px; /* 上からの余白を調整（お好みで変更） */
+    right: 20px; /* 右からの余白を調整（お好みで変更） */
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     width: 30px;
     height: 25px;
     cursor: pointer;
-    z-index: 1100;
+    z-index: 1100; /* メニューが他の要素より前面に表示されるようにする */
 }
 
 .hamburger-menu span {
@@ -88,4 +92,48 @@ nav ul li a {
 /* メニューがアクティブなとき */
 nav.active {
     right: 0;
+}
+
+/* スライダーのスタイル */
+.slider-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden; /* スライドが外にはみ出さないように隠す */
+}
+
+.slider {
+    display: flex;
+    transition: transform 0.3s ease-in-out;
+}
+
+.slide {
+    min-width: 300px; /* 各スライドの幅 */
+    margin: 10px;
+}
+
+.slider img {
+    width: 100%;
+    height: auto; /* イラストの高さは自動で調整 */
+    border-radius: 10px;
+}
+
+/* ナビゲーションボタン */
+.slider-nav {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.nav-btn {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    margin: 0 5px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.nav-btn:hover {
+    background-color: #555;
 }
