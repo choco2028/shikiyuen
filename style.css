@@ -29,6 +29,16 @@ header {
     object-position: center;
 }
 
+/* ロゴ部分 */
+.logo {
+    position: absolute;
+    top: 50px; /* ヘッダー内の上からの距離 */
+    left: 50px; /* ヘッダー内の左からの距離 */
+    width: 20%; /* ロゴの幅（必要に応じて調整） */
+    height: auto; /* 縦横比を維持 */
+    z-index: 10; /* 背景画像の上に表示 */
+}
+
 
 
 
