@@ -10,8 +10,16 @@
     cursor: pointer;
     z-index: 1100;
     position: fixed; /* 常に画面に固定 */
-    top: 20px; /* 画面の上端からの距離 */
-    right: 20px; /* 画面の右端からの距離 */
+    top: 10px; /* 画面の上端からの距離 */
+    right: 10px; /* 画面の右端からの距離 */
+}
+
+/* スマホでも同じように表示 */
+@media (max-width: 768px) {
+    .hamburger-menu {
+        top: 10px;
+        right: 10px;
+    }
 }
 
 .hamburger-menu span {
