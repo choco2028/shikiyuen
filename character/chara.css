@@ -8,6 +8,7 @@
 
 .table{
     display: table;
+
 }
 
 .table .row{
@@ -16,4 +17,15 @@
 
 .table .cell{
     display: table-cell;
+    vertical-align: middle;
+    background: bule;
+    padding: 10px;
+
+    img{
+    width: 80%;
+    }
+}
+
+.ryu{
+
 }
