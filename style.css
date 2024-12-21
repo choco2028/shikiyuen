@@ -52,6 +52,8 @@ header {
 }
 
 
+
+
 ///////////////////////////////////
 
 /* スライダーのスタイル */
@@ -124,21 +126,3 @@ header {
 
 //////////////////////////
 
-/* 右下に固定表示される画像のスタイル */
-#fixed-image {
-    position: fixed; /* スクロールしても位置を固定 */
-    bottom: 20px; /* 画面の下端からの距離 */
-    right: 20px; /* 画面の右端からの距離 */
-    z-index: 1000; /* 他の要素の上に表示されるように設定 */
-}
-
-#fixed-image img {
-    width: 50px; /* 画像の幅を設定 */
-    height: auto; /* 縦横比を維持 */
-    cursor: pointer; /* ホバー時にクリック可能な見た目に */
-    transition: transform 0.3s ease; /* ホバーアニメーションを追加 */
-}
-
-#fixed-image img:hover {
-    transform: scale(1.1); /* ホバー時に少し拡大 */
-}

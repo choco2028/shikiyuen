@@ -9,6 +9,9 @@
     height: 25px;
     cursor: pointer;
     z-index: 1100;
+    position: fixed; /* 常に画面に固定 */
+    top: 20px; /* 画面の上端からの距離 */
+    right: 20px; /* 画面の右端からの距離 */
 }
 
 .hamburger-menu span {
