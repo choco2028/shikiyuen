@@ -78,3 +78,54 @@ header {
     height: auto;
     border-radius: 10px;
 }
+
+
+////////////////////////////////
+
+/* ドットナビゲーション */
+.dots {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.dot-btn {
+    background-color: #333;
+    color: white;
+    padding: 5px;
+    margin: 0 5px;
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border: none;
+}
+
+.dot-btn:hover {
+    background-color: #555;
+}
+
+/* ナビゲーションボタン */
+.slider-nav {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    position: relative;
+}
+
+.nav-btn {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    margin: 0 5px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.nav-btn:hover {
+    background-color: #555;
+}
