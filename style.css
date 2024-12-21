@@ -1,5 +1,3 @@
-/* style.css */
-
 /* 基本リセット */
 * {
     margin: 0;
@@ -7,33 +5,30 @@
     box-sizing: border-box;
 }
 
-body {
-    font-family: 'Arial', sans-serif;
+html, body {
+    max-width: 100%; /* 横幅を超えないように */
     overflow-x: hidden; /* 横スクロールを無効化 */
-    max-width: 100%; /* 全体の幅を画面内に収める */
+    font-family: 'Arial', sans-serif;
 }
 
 /* ヘッダー部分 */
 header {
     width: 100%;
-    height: 100vh; /* ヘッダーの高さを画面全体に変更 */
+    height: 100vh;
     background-image: url('img/top.png');
-    background-size: cover; /* 画面を覆うように画像を拡大 */
-    background-position: center center; /* 中央に配置 */
-    background-repeat: no-repeat; /* 繰り返しを防ぐ */
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
 }
 
 /* メディアクエリ */
 @media (max-width: 768px) {
     header {
-        background-size: contain; /* 画像全体が収まるように調整 */
-        background-position: center center; /* 中央に配置 */
-        height: auto; /* 高さを自動調整 */
-        min-height: 100vh; /* 最小限でも画面いっぱいの高さを保持 */
+        background-size: contain;
+        height: auto;
+        min-height: 100vh;
     }
 }
-
-//////////////////////////////////
 
 /* 固定表示の画像 */
 #fixed-image {
@@ -41,7 +36,6 @@ header {
     bottom: 20px;
     right: 20px;
     z-index: 1000;
-    max-width: calc(100% - 40px); /* 画面の端からはみ出さないように調整 */
 }
 
 #fixed-image img {
@@ -55,76 +49,37 @@ header {
     transform: scale(1.1);
 }
 
-//////////////////////////////////
-
 /* スライダーのスタイル */
 .slider-container {
     position: relative;
     width: 100%;
-    overflow: hidden; /* スライドが外にはみ出さないように隠す */
+    overflow: hidden;
 }
 
 .slider {
     display: flex;
-    transition: transform 0.5s ease-in-out; /* スライド間の遷移をスムーズに */
-    will-change: transform; /* 効率的にアニメーションを処理するため */
+    transition: transform 0.5s ease-in-out;
+    will-change: transform;
 }
 
 .slide {
-    min-width: 250px; /* 各スライドの最小幅 */
-    max-width: 100%; /* 最大幅を画面幅に合わせる */
-    margin: 10px 5px; /* 横幅を調整 */
+    flex-shrink: 0; /* 要素が縮小してはみ出さないようにする */
+    min-width: calc(100% / 3); /* 表示幅を画面幅の1/3に調整 */
+    max-width: 100%; /* 画面幅を超えない */
+    margin: 10px 5px; /* スペース調整 */
 }
 
 .slider img {
     width: 100%;
-    height: auto; /* イラストの高さは自動で調整 */
+    height: auto;
     border-radius: 10px;
 }
 
-////////////////////////////////////
-
-/* レスポンシブ対応 */
-@media (max-width: 768px) {
-    .slide {
-        min-width: 150px; /* スライドの幅を縮小 */
-        margin: 5px; /* スペースを減らす */
-    }
-}
-
-/* ナビゲーションボタン */
-.slider-nav {
-    display: flex;
-    justify-content: center;
-    margin-top: 10px;
-    position: relative;
-    z-index: 10; /* ナビゲーションがスライドの下に隠れないように */
-}
-
-.nav-btn {
-    background-color: #333;
-    color: white;
-    padding: 10px;
-    margin: 0 5px;
-    border: none;
-    cursor: pointer;
-    font-weight: bold;
-    z-index: 100;
-}
-
-.nav-btn:hover {
-    background-color: #555;
-}
-
-///////////////////////////////////////
-
-/* ・・・ボタン */
+/* ドットナビゲーション */
 .dots {
     display: flex;
     justify-content: center;
     margin-top: 10px;
-    position: relative; /* スライダーの下に配置 */
-    z-index: 5; /* 他の要素と重ならないように調整 */
 }
 
 .dot-btn {
@@ -132,7 +87,7 @@ header {
     color: white;
     padding: 5px;
     margin: 0 5px;
-    border-radius: 50%; /* 丸いボタン */
+    border-radius: 50%;
     width: 15px;
     height: 15px;
     display: flex;
@@ -143,5 +98,27 @@ header {
 }
 
 .dot-btn:hover {
+    background-color: #555;
+}
+
+/* ナビゲーションボタン */
+.slider-nav {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    position: relative;
+}
+
+.nav-btn {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    margin: 0 5px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.nav-btn:hover {
     background-color: #555;
 }
