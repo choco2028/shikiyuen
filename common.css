@@ -82,4 +82,14 @@ body {
 }
 
 
+@media (max-width: 768px) {
+    html, body {
+        width: 100%; /* スマホ画面の幅を超えないように制限 */
+    }
+
+    img, iframe, video {
+        max-width: 100%; /* 画像や動画が画面幅を超えない */
+        height: auto; /* アスペクト比を保つ */
+    }
+}
 
