@@ -25,10 +25,9 @@ header {
 .background-image {
     width: 100%;
     height: 100vh;
-    object-fit: contain;  /* 画像全体が収まるように調整 */
+    object-fit: cover;
     object-position: center;
 }
-
 
 
 
