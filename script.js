@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function moveToSlide(index) {
         if (index < 0 || index >= totalSlides * 2) return;  // 複製されたスライドまでを対象にする
 
-        const offset = -300 * index; // 各スライドの幅 * インデックス
+        const offset = -250 * index; // 各スライドの幅 * インデックス
         slider.style.transition = 'transform 0.5s ease-in-out';
         slider.style.transform = `translateX(${offset}px)`;
         currentSlide = index;

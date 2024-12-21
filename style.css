@@ -156,29 +156,34 @@ header {
 ////////////////////////////////
 
 /* ドットナビゲーション */
+
+
+/* ドットボタンの中央配置 */
 .dots {
     display: flex;
-    justify-content: center;
-    margin-top: 10px;
+    justify-content: center; /* 横方向で中央揃え */
+    align-items: center; /* 垂直方向の整列（必要に応じて） */
+    width: 100%; /* 親要素全体の幅を使用 */
+    position: relative; /* 必要に応じて変更可能 */
+    margin-top: 10px; /* スライダーとの間隔を調整 */
 }
 
-.dot-btn {
-    background-color: #333;
+/* ドットボタン自体のデザイン */
+.dots .dot-btn {
+    background-color: #333; /* ドットボタンの背景色 */
     color: white;
-    padding: 30px;
-    margin: 0 5px;
-    border-radius: 50%;
-    width: 15px;
-    height: 15px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
     border: none;
+    border-radius: 50%; /* 丸いボタン */
+    width: 50px; /* ボタンの幅 */
+    height: 50px; /* ボタンの高さ */
+    margin: 0 5px; /* ボタン間の間隔 */
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease; /* アニメーション効果 */
 }
 
-.dot-btn:hover {
-    background-color: #555;
+.dots .dot-btn:hover {
+    transform: scale(1.2); /* ホバー時に拡大 */
+    background-color: #555; /* ホバー時の背景色 */
 }
 
 /* ナビゲーションボタン */
@@ -190,13 +195,14 @@ header {
 }
 
 .nav-btn {
-    background-color: #333;
-    color: white;
-    padding: 10px;
-    margin: 0 5px;
+    background-color: #333; /* ドットボタンの背景色 */
     border: none;
+    border-radius: 50%; /* 丸いボタン */
+    width: 10px; /* ボタンの幅 */
+    height: 10px; /* ボタンの高さ */
+    margin: 0 5px; /* ボタン間の間隔 */
     cursor: pointer;
-    font-weight: bold;
+    transition: transform 0.3s ease, background-color 0.3s ease; /* アニメーション効果 */
 }
 
 .nav-btn:hover {
