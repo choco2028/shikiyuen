@@ -1,0 +1,19 @@
+.logo{
+
+    display: flex;
+    justify-content: center; /* 横方向で中央揃え */
+
+
+}
+
+.table{
+    display: table;
+}
+
+.table .row{
+    display: table-row;
+}
+
+.table .cell{
+    display: table-cell;
+}
