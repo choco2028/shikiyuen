@@ -93,3 +93,41 @@ body {
     }
 }
 
+////////////////////////////////////
+
+/* フッターのスタイル */
+footer {
+    background-color: #333; /* フッターの背景色 */
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* SNSアイコンの配置 */
+.social-links {
+    display: flex;
+    justify-content: center; /* アイコンを中央揃え */
+    gap: 20px; /* アイコン間のスペース */
+}
+
+.social-links a img {
+    width: 40px; /* アイコンのサイズ */
+    height: auto; /* 縦横比を維持 */
+    transition: transform 0.3s ease; /* ホバーアニメーション */
+}
+
+.social-links a img:hover {
+    transform: scale(1.2); /* ホバー時に拡大 */
+    filter: brightness(1.2); /* 明るさを強調 */
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+    .social-links {
+        gap: 10px; /* スペースを狭める */
+    }
+
+    .social-links a img {
+        width: 30px; /* アイコンを小さくする */
+    }
+}
