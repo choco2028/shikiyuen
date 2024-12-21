@@ -26,6 +26,31 @@
     }
 }
 
-.ryu{
+.springback{
 
+    background-image: url(../img/springback.png);
+
+}
+
+.summerback{
+
+    background-image: url(../img/summerback.png);
+
+}
+
+.autumnback{
+
+    background-image: url(../img/autumnback.png);
+
+}
+
+.winterback{
+
+    background-image: url(../img/winterback.png);
+
+}
+
+.ryuback{
+
+    background-image: url(../img/ryuback.png);
 }

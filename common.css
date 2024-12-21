@@ -97,7 +97,7 @@ body {
 
 /* フッターのスタイル */
 footer {
-    background-color: #333; /* フッター全体の背景色 */
+    background-color: #e0e0e0; /* フッター全体の背景色 */
     color: white;
     text-align: center;
     padding: 30px 0;
