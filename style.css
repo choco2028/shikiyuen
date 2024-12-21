@@ -1,3 +1,5 @@
+/* style.css */
+
 /* 基本リセット */
 * {
     margin: 0;
@@ -20,7 +22,7 @@ header {
     background-repeat: no-repeat; /* 繰り返しを防ぐ */
 }
 
-/* 縦長の画面の場合にcontainを使用し、横にはみ出さないように調整 */
+/* メディアクエリ */
 @media (max-width: 768px) {
     header {
         background-size: contain; /* 画像全体が収まるように調整 */
@@ -30,69 +32,25 @@ header {
     }
 }
 
-.logo img {
-    height: 50px;
-}
-
-/* ハンバーガーメニュー */
-.hamburger-menu {
-    position: fixed; /* スクロールしても固定されるようにする */
-    top: 20px; /* 上からの余白を調整（お好みで変更） */
-    right: 20px; /* 右からの余白を調整（お好みで変更） */
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    width: 30px;
-    height: 25px;
-    cursor: pointer;
-    z-index: 1100; /* メニューが他の要素より前面に表示されるようにする */
-}
-
-.hamburger-menu span {
-    display: block;
-    height: 3px;
-    width: 100%;
-    background: #333;
-    border-radius: 2px;
-    transition: all 0.3s;
-}
-
-/* ナビゲーションメニュー */
-nav {
-    display: flex;
-    flex-direction: column;
+/* 固定表示の画像 */
+#fixed-image {
     position: fixed;
-    top: 0;
-    right: -250px;
-    width: 250px;
-    height: 100vh;
-    background-color: #fff;
-    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
-    transition: right 0.3s ease-in-out;
+    bottom: 20px;
+    right: 20px;
     z-index: 1000;
-    overflow-y: auto;
 }
 
-nav ul {
-    list-style: none;
-    padding: 20px;
+#fixed-image img {
+    width: 50px;
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.3s ease;
 }
 
-nav ul li {
-    padding: 15px 0;
-    border-bottom: 1px solid #eee;
+#fixed-image img:hover {
+    transform: scale(1.1);
 }
 
-nav ul li a {
-    text-decoration: none;
-    color: #333;
-    font-weight: bold;
-}
-
-/* メニューがアクティブなとき */
-nav.active {
-    right: 0;
-}
 
 ///////////////////////////////////
 
