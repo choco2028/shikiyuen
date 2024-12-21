@@ -13,6 +13,7 @@
 
 .table .row{
     display: table-row;
+    margin: 100px;
 }
 
 .table .cell{
