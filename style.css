@@ -6,9 +6,8 @@
 }
 
 html, body {
-    max-width: 100%; /* 横幅を超えないように */
+    max-width: 100%;
     overflow-x: hidden; /* 横スクロールを無効化 */
-    font-family: 'Arial', sans-serif;
 }
 
 /* ヘッダー部分 */
@@ -36,6 +35,8 @@ header {
     bottom: 20px;
     right: 20px;
     z-index: 1000;
+    max-width: 100%;
+    overflow: hidden;
 }
 
 #fixed-image img {
@@ -58,67 +59,22 @@ header {
 
 .slider {
     display: flex;
+    transition: -webkit-transform 0.5s ease-in-out;
     transition: transform 0.5s ease-in-out;
     will-change: transform;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
 }
 
 .slide {
-    flex-shrink: 0; /* 要素が縮小してはみ出さないようにする */
-    min-width: calc(100% / 3); /* 表示幅を画面幅の1/3に調整 */
-    max-width: 100%; /* 画面幅を超えない */
-    margin: 10px 5px; /* スペース調整 */
+    flex-shrink: 0;
+    min-width: calc(100% / 3);
+    max-width: 100%;
+    box-sizing: border-box;
 }
 
 .slider img {
     width: 100%;
     height: auto;
     border-radius: 10px;
-}
-
-/* ドットナビゲーション */
-.dots {
-    display: flex;
-    justify-content: center;
-    margin-top: 10px;
-}
-
-.dot-btn {
-    background-color: #333;
-    color: white;
-    padding: 5px;
-    margin: 0 5px;
-    border-radius: 50%;
-    width: 15px;
-    height: 15px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    border: none;
-}
-
-.dot-btn:hover {
-    background-color: #555;
-}
-
-/* ナビゲーションボタン */
-.slider-nav {
-    display: flex;
-    justify-content: center;
-    margin-top: 10px;
-    position: relative;
-}
-
-.nav-btn {
-    background-color: #333;
-    color: white;
-    padding: 10px;
-    margin: 0 5px;
-    border: none;
-    cursor: pointer;
-    font-weight: bold;
-}
-
-.nav-btn:hover {
-    background-color: #555;
 }
