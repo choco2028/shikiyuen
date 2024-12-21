@@ -96,6 +96,41 @@ header {
     border-radius: 10px;
 }
 
+//////////////
+
+/* メディアクエリ */
+@media (max-width: 768px) {
+
+	.slider-container {
+    		position: relative;
+    		width: 100%;
+    		overflow: hidden;
+	}
+
+	.slider {
+    		display: flex;
+    		transition: -webkit-transform 0.5s ease-in-out;
+    		transition: transform 0.5s ease-in-out;
+    		will-change: transform;
+    		backface-visibility: hidden;
+    		-webkit-backface-visibility: hidden;
+	}
+
+	.slide {
+    		flex-shrink: 0;
+    		min-width: calc(100% / 3);
+    		max-width: 33%;
+    		box-sizing: border-box;
+	}
+
+	.slider img {
+    		width: 100%;
+    		height: auto;
+    		border-radius: 10px;
+	}
+
+}
+
 
 ////////////////////////////////
 
