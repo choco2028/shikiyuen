@@ -29,28 +29,35 @@
 .springback{
 
     background-image: url(../img/springback.png);
+    background-size: 100%;
 
 }
 
 .summerback{
 
     background-image: url(../img/summerback.png);
+    background-size: 100%;
 
 }
 
 .autumnback{
 
     background-image: url(../img/autumnback.png);
+    background-size: 100%;
 
 }
 
 .winterback{
 
     background-image: url(../img/winterback.png);
+    background-size: 100%;
 
 }
 
 .ryuback{
 
     background-image: url(../img/ryuback.png);
+    background-size: 100%;
+
 }
+
