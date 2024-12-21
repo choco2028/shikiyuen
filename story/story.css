@@ -5,3 +5,38 @@
 
 
 }
+
+.midashi{
+
+    display: flex;
+    justify-content: center; /* 横方向で中央揃え */
+    font-family: "Times New Roman","MS PMincho";
+
+}
+
+.komidashi{
+
+    display: flex;
+    justify-content: center; /* 横方向で中央揃え */
+    font-family: "Times New Roman","MS PMincho";
+
+}
+
+.honbun{
+
+    display: flex;
+    justify-content: center; /* 横方向で中央揃え */
+    font-family: "Times New Roman","MS PMincho";
+
+}
+
+.table{
+    display: table;
+    margin: auto;
+    background-color: #e0e0e0;
+    max-width: 100%;
+}
+
+.table .row{
+    display: table-row;
+}
