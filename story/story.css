@@ -12,6 +12,13 @@
     justify-content: center; /* 横方向で中央揃え */
     font-family: "Times New Roman","MS PMincho";
     max-width: 100%;
+    background-color: #e0e0e0;
+
+}
+
+.title{
+
+    font-size: 200%;
 
 }
 
@@ -36,7 +43,7 @@
 
     display: table;
     margin: auto;
-    background-color: #e0e0e0;
+
     max-width: 100%;
 
 }
