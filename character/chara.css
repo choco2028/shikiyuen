@@ -75,6 +75,13 @@ td {
 }
 
 
+.cell{
+
+	width: 50%;
+
+}
+
+
 .anai{
 
     display: flex;
