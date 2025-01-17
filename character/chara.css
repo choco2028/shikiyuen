@@ -40,7 +40,9 @@ td {
 .springback{
 
     background-image: url(../img/springback.png);
-    background-size: 400%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 
 }
 
