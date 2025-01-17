@@ -62,3 +62,25 @@
 
 }
 
+.anai{
+
+    display: flex;
+    justify-content: center; /* 横方向で中央揃え */
+
+}
+
+.midashi{
+
+    display: flex;
+    justify-content: center; /* 横方向で中央揃え */
+    font-family: "Times New Roman","MS PMincho";
+    max-width: 100%;
+    background-color: #e0e0e0;
+
+}
+
+.title{
+
+    font-size: 200%;
+
+}
