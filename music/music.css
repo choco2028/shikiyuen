@@ -1,0 +1,87 @@
+.logo{
+
+    display: flex;
+    justify-content: center; /* 横方向で中央揃え */
+
+
+}
+
+.midashi{
+
+    display: flex;
+    justify-content: center; /* 横方向で中央揃え */
+    font-family: "Times New Roman","MS PMincho";
+    max-width: 100%;
+    background-color: #e0e0e0;
+
+}
+
+.title{
+
+    font-size: 200%;
+
+}
+
+
+
+.mainback{
+
+    /* background-image: url(../img/springback.png); */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+}
+
+.springback{
+
+    /* background-image: url(../img/springback.png); */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+}
+
+.summerback{
+
+    /* background-image: url(../img/summerback.png); */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+}
+
+.autumnback{
+
+    /* background-image: url(../img/autumnback.png); */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+}
+
+.winterback{
+
+    /* background-image: url(../img/winterback.png); */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+}
+
+.edback{
+
+    /* background-image: url(../img/ryuback.png); */
+    background-repeat: no-repeat;
+    background-size: 400%;
+    background-position: center;
+
+}
+
+.cell{
+
+	width: 50%;
+    justify-content: center; /* 横方向で中央揃え */
+    font-family: "Times New Roman","MS PMincho";
+
+}
