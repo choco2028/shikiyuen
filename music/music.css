@@ -81,6 +81,7 @@
 .cell{
 
     width: 50%;
+    font-size: 130%;
     justify-content: center; /* 横方向で中央揃え */
     font-family: "Times New Roman","MS PMincho";
 
