@@ -15,7 +15,7 @@ table {
 }
 
 td {
-    padding: 0px; /* セル内の余白を指定 */
+    padding: 10px; /* セル内の余白を指定 */
     background: none !important; /* セル単体の背景を無効化 */
     text-align: center; /* テキストの中央寄せ */
     color: white; /* 背景画像上で見やすい文字色に */
