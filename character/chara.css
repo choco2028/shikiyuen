@@ -6,17 +6,27 @@
 
 }
 
-.table{
-    display: table;
 
+
+/* テーブル全体のスタイルを整える */
+table {
+    border-collapse: collapse; /* セル間の隙間をなくす */
+    width: 100%; /* テーブルの幅を指定 */
 }
 
-.table .row{
+td {
+    padding: 10px; /* セル内の余白を指定 */
+    background: none !important; /* セル単体の背景を無効化 */
+    text-align: center; /* テキストの中央寄せ */
+    color: white; /* 背景画像上で見やすい文字色に */
+}
+
+.row{
     display: table-row;
     margin: 100px;
 }
 
-.table .cell{
+.cell{
     display: table-cell;
     vertical-align: middle;
     background: bule;
