@@ -21,10 +21,7 @@ td {
     color: white; /* 背景画像上で見やすい文字色に */
 }
 
-.row{
-    display: table-row;
-    margin: 100px;
-}
+
 
 .cell{
     display: table-cell;
