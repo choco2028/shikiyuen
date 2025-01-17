@@ -63,6 +63,11 @@ nav ul li a {
     font-weight: bold;
 }
 
+nav ul li a p {
+    font-size: 12px;
+
+}
+
 /* メニューがアクティブなとき */
 nav.active {
     right: 0;
