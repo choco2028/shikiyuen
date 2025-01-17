@@ -55,10 +55,16 @@
 
 }
 
-/* テーブル全体のスタイルを整える */
+
+
 table {
     border-collapse: collapse; /* セル間の隙間をなくす */
     width: 100%; /* テーブルの幅を指定 */
+}
+
+tr {
+    display: block; /* 行をブロック要素として扱う */
+    width: 100%; /* 行全体に幅を適用 */
 }
 
 td {
