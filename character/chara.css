@@ -37,28 +37,36 @@ td {
 .summerback{
 
     background-image: url(../img/summerback.png);
-    background-size: 400%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 
 }
 
 .autumnback{
 
     background-image: url(../img/autumnback.png);
-    background-size: 400%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 
 }
 
 .winterback{
 
     background-image: url(../img/winterback.png);
-    background-size: 400%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 
 }
 
 .ryuback{
 
     background-image: url(../img/ryuback.png);
-    background-size: 400%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 
 }
 
