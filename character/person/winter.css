@@ -111,7 +111,7 @@ main {
 
     .profile-image, .profile-info {
         flex: none;
-        width: 100%;
+        width: 95%;
     }
 
     .profile-image img {
