@@ -15,7 +15,7 @@ html, body {
 header {
     width: 100%;
     height: 100vh; /* ヘッダーの高さを画面全体に変更 */
-
+    background-image: url(img/headerback.png);
     background-size: cover; /* 画面を覆うように画像を拡大 */
     background-position: center center; /* 中央に配置 */
     background-repeat: no-repeat; /* 繰り返しを防ぐ */
